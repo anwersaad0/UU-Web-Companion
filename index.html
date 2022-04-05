@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unstable Unicorns Web Tracker</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+
+            <h1 id="websiteName">Unstable Unicorns Web Tracker</h1>
+
+            <div>
+                <button type="button" id="addPlayer">Add Player</button>
+                <button type="button" id="startGame">Start Game</button>
+                <button type="button" id="resetGame">Reset Game</button>
+                <button type="button" id="resetAll">Reset All</button>
+            </div>
+
+        </header>
+
+        <main>
+
+            <div>
+                <div id="playerModal" class="modal">
+                    <div class="playerModalContent">
+                        <h1>Add a New Player</h1>
+
+                        <label for="playerName">Name:</label>
+                        <input type="text" id="playerName" name="playerName"><br><br>
+
+                        <input type="submit" name="submitPlayer" id="submitPlayer">
+                    </div>
+                </div>
+
+                <div id="cardModal" class="modal">
+                    <div class="cardModalContent">
+                        <h1>Add a Card</h1>
+
+                        <label for="cardName">Card Name:</label>
+                        <input type="text" id="cardName" name="cardName"><br><br>
+
+                        <label for="cardDesc">Description:</label>
+                        <input type="text" id="cardDesc" name="cardDesc"><br><br>
+
+                        <input type="submit" name="submitCard" id="submitCard">
+                    </div>
+                </div>
+            </div>
+
+            <div id="playerListDiv"></div>
+
+        </main>
+        
+        <footer>
+            <p id="credit">Made by anwersaad0</p>
+        </footer>
+    </body>
+    <script src="UUCompanion.js"></script>
+</html>
