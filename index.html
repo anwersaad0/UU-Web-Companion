@@ -3,17 +3,23 @@
     <head>
         <title>Unstable Unicorns Web Tracker</title>
         <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="UUWCfavicon.png">
     </head>
     <body>
         <header>
+            <a id="GitLink" href="https://github.com/anwersaad0/UU-Web-Companion">
+                <img src="GitHub-Mark-32px.png">
+            </a>
 
-            <h1 id="websiteName">Unstable Unicorns Web Tracker</h1>
+            <h1 id="websiteName">Unstable Unicorns Turn Tracker</h1>
 
+            <h5>Made by anwersaad0</h5>
+                
             <div>
                 <button type="button" id="addPlayer">Add Player</button>
                 <button type="button" id="startGame">Start Game</button>
                 <button type="button" id="resetGame">Reset Game</button>
-                <button type="button" id="resetAll">Reset All</button>
+                <button type="button" id="resetAllBtn">Reset All</button>
             </div>
 
         </header>
@@ -25,6 +31,8 @@
                     <div class="playerModalContent">
                         <h1>Add a New Player</h1>
 
+                        <h4>A maximum of 8 players will be visible on the board.</h4>
+
                         <label for="playerName">Name:</label>
                         <input type="text" id="playerName" name="playerName"><br><br>
 
@@ -32,17 +40,38 @@
                     </div>
                 </div>
 
-                <div id="cardModal" class="modal">
-                    <div class="cardModalContent">
-                        <h1>Add a Card</h1>
+                <div id="startGameModal" class="modal">
+                    <div class="startGameModalContent">
+                        <h1>Name the Most Colorful Player</h1>
 
-                        <label for="cardName">Card Name:</label>
-                        <input type="text" id="cardName" name="cardName"><br><br>
+                        <h4>Their border will be highlighted pink to indicate that it is their turn.</h4>
 
-                        <label for="cardDesc">Description:</label>
-                        <input type="text" id="cardDesc" name="cardDesc"><br><br>
+                        <label for="startGameName">Name:</label>
+                        <input type="text" id="startGameName" name="startGameName"><br><br>
 
-                        <input type="submit" name="submitCard" id="submitCard">
+                        <input type="submit" name="submitStart" id="submitStart">
+                    </div>
+                </div>
+
+                <div id="resetGameModal" class="modal">
+                    <div class="resetGameModalContent">
+                        <h1>Reset All Stables?</h1>
+
+                        <h4>Players will not be removed, but all stables will be emptied.</h4>
+
+                        <button type="button" id="declineResetGame">No</button>
+                        <button type="button" id="confirmResetGame">Yes</button>
+                    </div>
+                </div>
+
+                <div id="resetAllModal" class="modal">
+                    <div class="resetAllModalContent">
+                        <h1>Reset All Players and Cards?</h1>
+
+                        <h4>Everything on the board will be removed.</h4>
+
+                        <button type="button" id="declineResetAll">No</button>
+                        <button type="button" id="confirmResetAll">Yes</button>
                     </div>
                 </div>
             </div>
@@ -51,9 +80,6 @@
 
         </main>
         
-        <footer>
-            <p id="credit">Made by anwersaad0</p>
-        </footer>
     </body>
     <script src="UUCompanion.js"></script>
 </html>
