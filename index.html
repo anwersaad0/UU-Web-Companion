@@ -20,6 +20,7 @@
                 <button type="button" id="startGame">Start Game</button>
                 <button type="button" id="resetGame">Reset Game</button>
                 <button type="button" id="resetAllBtn">Reset All</button>
+                <button type="button" id="infoBtn">Info</button>
             </div>
 
         </header>
@@ -72,6 +73,34 @@
 
                         <button type="button" id="declineResetAll">No</button>
                         <button type="button" id="confirmResetAll">Yes</button>
+                    </div>
+                </div>
+
+                <div id="infoModal" class="modal">
+                    <div class="infoModalContent">
+                        <div id="infoText">
+                            <h3>Info</h3>
+
+                            <h5>Main UI</h5>
+
+                            <h6>Use 'Add Player' to add a player to the board</h6>
+                            <h6>Use 'Start Game' to set which player will go first</h6>
+                            <h6>'Reset Game' can be used to reset every player's stable</h6>
+                            <h6>'Reset All' will clear the entire board</h6>
+
+                            <h5>Player UI</h5>
+
+                            <h6>'Add Card' can be used to add a card to a specific player's stable</h6>
+                            <h6>'My Turn' will set the current turn to the selected player</h6>
+                            <h6>'Remove Player' removes the selected player</h6>
+
+                            <h5>Card UI</h5>
+
+                            <h6>Enter the card name in the left text box</h6>
+                            <h6>Enter the card effect in the right text box or leave blank if the card has no effect</h6>
+                            <h6>'Submit Card' locks the name and description and adds the card to the player's stable</h6>
+                            <h6>'Delete Card' removes the selected card from the player's stable</h6>
+                        </div>
                     </div>
                 </div>
             </div>

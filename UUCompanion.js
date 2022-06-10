@@ -8,11 +8,13 @@ const playerModal = document.getElementById("playerModal");
 const startGameModal = document.getElementById("startGameModal");
 const resetGameModal = document.getElementById("resetGameModal");
 const resetAllModal = document.getElementById("resetAllModal");
+const infoModal = document.getElementById("infoModal");
 
 const addPlayerBtn = document.getElementById("addPlayer");
 const startGameBtn = document.getElementById("startGame");
 const resetGameBtn = document.getElementById("resetGame");
 const resetAllBtn = document.getElementById("resetAllBtn");
+const infoBtn = document.getElementById("infoBtn");
 
 const playerNameInput = document.getElementById("playerName");
 const submitPlayerBtn = document.getElementById("submitPlayer");
@@ -105,7 +107,7 @@ function addPlayer() {
 
     let nextTurnButton = document.createElement("button");
     nextTurnButton.setAttribute("id", "nextTurnBtn");
-    nextTurnButton.textContent = "Next Turn";
+    nextTurnButton.textContent = "My Turn";
     nextTurnButton.onclick = function(){nextTurn(newPlayerDiv)};
 
     let newCardsDiv = document.createElement("div");
@@ -169,6 +171,8 @@ window.addEventListener('click', function(e) {
         resetGameModal.style.display = "none";
     } else if (e.target == resetAllModal) {
         resetAllModal.style.display = "none";
+    } else if (e.target == infoModal) {
+        infoModal.style.display = "none";
     }
 });
 
@@ -220,4 +224,8 @@ submitStartGame.addEventListener('click', function(e) {
         startGameInput.value = "";
         startGameModal.style.display = "none";
     }
+});
+
+infoBtn.addEventListener('click', function(e) {
+    infoModal.style.display = "block";
 });
