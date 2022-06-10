@@ -18,9 +18,11 @@ const infoBtn = document.getElementById("infoBtn");
 
 const playerNameInput = document.getElementById("playerName");
 const submitPlayerBtn = document.getElementById("submitPlayer");
+const cancelPlayerBtn = document.getElementById("closeSubmit");
 
 const startGameInput = document.getElementById("startGameName");
 const submitStartGame = document.getElementById("submitStart");
+const cancelStartGame = document.getElementById("closeStart");
 
 const cardNameInput = document.getElementById("cardName");
 const cardDescInput = document.getElementById("cardDesc");
@@ -31,6 +33,8 @@ const confirmResetGameBtn = document.getElementById("confirmResetGame");
 
 const declineResetAllBtn = document.getElementById("declineResetAll");
 const confirmResetAllBtn = document.getElementById("confirmResetAll");
+
+const closeInfo = document.getElementById("closeInfo");
 //
 
 //constructors
@@ -228,4 +232,16 @@ submitStartGame.addEventListener('click', function(e) {
 
 infoBtn.addEventListener('click', function(e) {
     infoModal.style.display = "block";
+});
+
+cancelPlayerBtn.addEventListener('click', function(e) {
+    playerModal.style.display = "none";
+});
+
+cancelStartGame.addEventListener('click', function(e) {
+    startGameModal.style.display = "none";
+})
+
+closeInfo.addEventListener('click', function(e) {
+    infoModal.style.display = "none";
 });
